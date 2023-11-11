@@ -22,9 +22,11 @@ import cl.sarayar.gestorTareasRest.services.TareasService;
 @RestController
 @RequestMapping("/tareas")
 public class TareasController {
-	
-	@Autowired
 	private TareasService tareasService;
+	@Autowired
+	public TareasController(TareasService tareasService){
+		this.tareasService = tareasService;
+	}
 
 	@GetMapping("/get")
 	public List<Tarea> getAll(){
