@@ -9,6 +9,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @AllArgsConstructor
+@Generated
 public class MessageResponse {
 
 	private String mensaje;

@@ -11,6 +11,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
+@Generated
 public class Secuencia {
 	  	@Id
 	    private String id;

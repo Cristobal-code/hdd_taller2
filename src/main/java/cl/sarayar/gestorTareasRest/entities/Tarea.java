@@ -21,6 +21,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @Document(collection = "tareas")
+@Generated
 public class Tarea {
 
 	@Transient

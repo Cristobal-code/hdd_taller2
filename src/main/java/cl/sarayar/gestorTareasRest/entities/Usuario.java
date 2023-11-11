@@ -16,6 +16,7 @@ import lombok.ToString;
 @Document(collection="usuarios")
 @AllArgsConstructor
 @NoArgsConstructor
+@Generated
 public class Usuario {
 	@Id
 	private String id;
