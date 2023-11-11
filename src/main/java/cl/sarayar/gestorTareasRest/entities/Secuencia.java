@@ -1,5 +1,6 @@
 package cl.sarayar.gestorTareasRest.entities;
 
+import lombok.Generated;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
