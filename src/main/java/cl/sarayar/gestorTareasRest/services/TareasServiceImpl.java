@@ -10,8 +10,12 @@ import cl.sarayar.gestorTareasRest.repositories.TareasRepository;
 @Service
 public class TareasServiceImpl implements TareasService {
 
-	@Autowired
+
 	private TareasRepository tareasRepository;
+	@Autowired
+	public TareasServiceImpl(TareasRepository tareasRepository){
+		this.tareasRepository = tareasRepository;
+	}
 	
 	@Override
 	public List<Tarea> findAll() {
