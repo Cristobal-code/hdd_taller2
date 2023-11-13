@@ -11,8 +11,12 @@ import cl.sarayar.gestorTareasRest.services.GeneradorSecuenciaService;
 @Component
 public class TareasModelListener extends AbstractMongoEventListener<Tarea>{
 
-	@Autowired
+
 	private GeneradorSecuenciaService generador;
+	@Autowired
+	public TareasModelListener( GeneradorSecuenciaService generador){
+		this.generador = generador;
+	}
 	
 	@Override
 	public void onBeforeConvert(BeforeConvertEvent<Tarea> event) {
