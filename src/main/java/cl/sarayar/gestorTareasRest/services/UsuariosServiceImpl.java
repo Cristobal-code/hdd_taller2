@@ -14,8 +14,13 @@ import cl.sarayar.gestorTareasRest.repositories.UsuariosRepository;
 @Service
 public class UsuariosServiceImpl implements UsuariosService{
 
-	@Autowired
+
 	private UsuariosRepository usRepo;
+
+	@Autowired
+	public UsuariosServiceImpl( UsuariosRepository usRepo){
+		this.usRepo = usRepo;
+	}
 	@Override
 	public Usuario save(Usuario usuario) {
 
