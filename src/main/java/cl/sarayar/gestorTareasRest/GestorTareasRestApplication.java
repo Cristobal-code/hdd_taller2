@@ -2,6 +2,7 @@ package cl.sarayar.gestorTareasRest;
 
 import cl.sarayar.gestorTareasRest.entities.Usuario;
 import cl.sarayar.gestorTareasRest.services.UsuariosService;
+import lombok.Generated;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,14 +18,18 @@ import java.util.List;
 @ComponentScan
 public class GestorTareasRestApplication implements CommandLineRunner {
 
+	private UsuariosService usService;
+	@Autowired
+	GestorTareasRestApplication(UsuariosService usService){
+		this.usService = usService;
+	}
+
+@Generated
 	public static void main(String[] args) {
 		SpringApplication.run(GestorTareasRestApplication.class, args);
 	}
 
 	private static final Logger logger = LoggerFactory.getLogger(GestorTareasRestApplication.class);
-
-	@Autowired
-	private UsuariosService usService;
 
 	@Override
 	public void run(String... args) throws Exception{
